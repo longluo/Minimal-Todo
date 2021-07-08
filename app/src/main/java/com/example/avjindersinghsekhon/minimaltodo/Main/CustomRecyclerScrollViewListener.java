@@ -1,7 +1,8 @@
 package com.example.avjindersinghsekhon.minimaltodo.Main;
 
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public abstract class CustomRecyclerScrollViewListener extends RecyclerView.OnScrollListener {
     int scrollDist = 0;

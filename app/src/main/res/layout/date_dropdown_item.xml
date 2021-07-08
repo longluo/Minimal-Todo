@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@android:id/text1"
-    android:ellipsize="marquee"
-    android:text="Gender"
-    android:textSize="14sp"
-    android:paddingTop="8dp"
-    android:paddingBottom="8dp"
-    android:paddingLeft="16dp"
-    android:textColor="@drawable/dropdown_text_color"
+    style="?android:attr/spinnerDropDownItemStyle"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/dropdown_text_background_color"
-    android:layout_width="match_parent"
-    style="?android:attr/spinnerDropDownItemStyle"
-    >
-
+    android:ellipsize="marquee"
+    android:paddingLeft="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:text="Gender"
+    android:textColor="@drawable/dropdown_text_color"
+    android:textSize="14sp">
 
 </TextView>

@@ -1,9 +1,10 @@
 package com.example.avjindersinghsekhon.minimaltodo.Utility;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class RecyclerViewEmptySupport extends RecyclerView {
     private View emptyView;
@@ -27,7 +28,6 @@ public class RecyclerViewEmptySupport extends RecyclerView {
         }
     };
 
-
     public RecyclerViewEmptySupport(Context context) {
         super(context);
     }
@@ -44,7 +44,6 @@ public class RecyclerViewEmptySupport extends RecyclerView {
                 RecyclerViewEmptySupport.this.setVisibility(VISIBLE);
             }
         }
-
     }
 
     public RecyclerViewEmptySupport(Context context, AttributeSet attrs) {

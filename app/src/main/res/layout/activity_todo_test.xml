@@ -1,15 +1,13 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:animateLayoutChanges="true"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    >
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
 
-    <include layout="@layout/base_toolbar"/>
+    <include layout="@layout/base_toolbar" />
 
-    <android.support.design.widget.CoordinatorLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -26,7 +24,6 @@
                 android:background="?attr/colorPrimary"
                 android:gravity="center"
                 android:orientation="vertical">
-
 
                 <com.example.avjindersinghsekhon.minimaltodo.Utility.CustomTextInputLayout
                     android:id="@+id/toDoCustomTextInput"
@@ -64,8 +61,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginLeft="36dp"
-                    android:layout_marginRight="36dp"
                     android:layout_marginTop="32dp"
+                    android:layout_marginRight="36dp"
                     android:layout_weight=".5"
                     android:gravity="center"
                     android:orientation="horizontal">
@@ -85,10 +82,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:gravity="start"
-                        android:paddingBottom="8dp"
                         android:paddingLeft="8dp"
-                        android:paddingRight="8dp"
                         android:paddingTop="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="8dp"
                         android:text="@string/remind_me"
                         android:textColor="@color/secondary_text"
                         android:textSize="16sp" />
@@ -174,7 +171,7 @@
 
         </LinearLayout>
 
-        <android.support.design.widget.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/makeToDoFloatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -184,5 +181,5 @@
             app:fabSize="normal"
             app:layout_anchor="@id/editTextParentLinearLayout"
             app:layout_anchorGravity="bottom|right" />
-    </android.support.design.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </LinearLayout>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <include layout="@layout/base_toolbar"/>
+    <include layout="@layout/base_toolbar" />
 
     <!--Put all strings to string.xml-->
 
@@ -20,7 +20,7 @@
         android:paddingLeft="16dp"
         android:text="@string/example"
         android:textColor="@color/icons"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/toDoReminderRemoveButton"
@@ -29,7 +29,7 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/button_pressed_background"
         android:text="@string/remove"
-        android:textColor="@android:color/white"/>
+        android:textColor="@android:color/white" />
 
     <LinearLayout
         android:id="@+id/toDoReminderLinearLayout"
@@ -53,7 +53,7 @@
             android:gravity="start"
             android:padding="8dp"
             android:text="@string/snooze"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <fr.ganfra.materialspinner.MaterialSpinner
             android:id="@+id/todoReminderSnoozeSpinner"
@@ -62,11 +62,8 @@
             android:layout_marginLeft="2dp"
             android:layout_marginRight="16dp"
             android:layout_weight="1.5"
-            app:ms_highlightColor="?attr/colorAccent"
-            />
-
+            app:ms_highlightColor="?attr/colorAccent" />
 
     </LinearLayout>
-
 
 </RelativeLayout>

@@ -3,12 +3,14 @@ package com.example.avjindersinghsekhon.minimaltodo.Utility;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+
+import androidx.core.view.ViewCompat;
+
+import com.google.android.material.textfield.TextInputLayout;
 
 public class CustomTextInputLayout extends TextInputLayout {
 

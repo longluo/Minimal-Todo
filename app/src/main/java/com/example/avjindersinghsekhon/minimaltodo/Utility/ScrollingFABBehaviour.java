@@ -1,12 +1,14 @@
 package com.example.avjindersinghsekhon.minimaltodo.Utility;
 
 import android.content.Context;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.appcompat.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 public class ScrollingFABBehaviour extends CoordinatorLayout.Behavior<FloatingActionButton> {
     private int toolbarHeight;
@@ -52,7 +54,6 @@ public class ScrollingFABBehaviour extends CoordinatorLayout.Behavior<FloatingAc
             float distFinal = -distanceToScroll * finalVal;
             child.setTranslationY(distFinal);
         }
-
 
         return true;
     }

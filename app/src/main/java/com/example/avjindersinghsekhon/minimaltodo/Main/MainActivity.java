@@ -2,11 +2,13 @@ package com.example.avjindersinghsekhon.minimaltodo.Main;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 
 import com.example.avjindersinghsekhon.minimaltodo.About.AboutActivity;
 import com.example.avjindersinghsekhon.minimaltodo.AppDefault.AppDefaultActivity;
@@ -17,7 +19,7 @@ public class MainActivity extends AppDefaultActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -49,6 +51,7 @@ public class MainActivity extends AppDefaultActivity {
                 Intent i = new Intent(this, AboutActivity.class);
                 startActivity(i);
                 return true;
+
 //            case R.id.switch_themes:
 //                if(mTheme == R.style.CustomStyle_DarkTheme){
 //                    addThemeToSharedPreferences(LIGHTTHEME);
@@ -65,6 +68,7 @@ public class MainActivity extends AppDefaultActivity {
 ////                }
 //                this.recreate();
 //                return true;
+            
             case R.id.preferences:
                 Intent intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
@@ -74,7 +78,4 @@ public class MainActivity extends AppDefaultActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
 }
-
-

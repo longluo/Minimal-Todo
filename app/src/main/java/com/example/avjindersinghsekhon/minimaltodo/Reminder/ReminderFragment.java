@@ -4,9 +4,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -66,7 +67,6 @@ public class ReminderFragment extends AppDefaultFragment {
 
         ((AppCompatActivity) getActivity()).setSupportActionBar((Toolbar) view.findViewById(R.id.toolbar));
 
-
         Intent i = getActivity().getIntent();
         UUID id = (UUID) i.getSerializableExtra(TodoNotificationService.TODOUUID);
         mItem = null;
@@ -108,7 +108,6 @@ public class ReminderFragment extends AppDefaultFragment {
             }
         });
 
-
 //        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, snoozeOptionsArray);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), R.layout.spinner_text_view, snoozeOptionsArray);
 //        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -132,9 +131,7 @@ public class ReminderFragment extends AppDefaultFragment {
         editor.putBoolean(EXIT, true);
         editor.apply();
         startActivity(i);
-
     }
-
 
     public boolean onCreateOptionsMenu(Menu menu) {
         getActivity().getMenuInflater().inflate(R.menu.menu_reminder, menu);

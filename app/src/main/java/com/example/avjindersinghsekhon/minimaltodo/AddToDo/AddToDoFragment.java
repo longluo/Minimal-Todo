@@ -9,12 +9,6 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.NavUtils;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SwitchCompat;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
@@ -28,15 +22,20 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.content.ClipboardManager;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.NavUtils;
 
 import com.example.avjindersinghsekhon.minimaltodo.Analytics.AnalyticsApplication;
 import com.example.avjindersinghsekhon.minimaltodo.AppDefault.AppDefaultFragment;
-import com.example.avjindersinghsekhon.minimaltodo.Main.MainActivity;
 import com.example.avjindersinghsekhon.minimaltodo.Main.MainFragment;
 import com.example.avjindersinghsekhon.minimaltodo.R;
 import com.example.avjindersinghsekhon.minimaltodo.Utility.ToDoItem;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
@@ -153,14 +152,13 @@ public class AddToDoFragment extends AppDefaultFragment implements DatePickerDia
         }
 
 
-
         //Button for Copy to Clipboard
         mCopyClipboard = (Button) view.findViewById(R.id.copyclipboard);
 
         mContainerLayout = (LinearLayout) view.findViewById(R.id.todoReminderAndDateContainerLayout);
         mUserDateSpinnerContainingLinearLayout = (LinearLayout) view.findViewById(R.id.toDoEnterDateLinearLayout);
         mToDoTextBodyEditText = (EditText) view.findViewById(R.id.userToDoEditText);
-        mToDoTextBodyDescription= (EditText) view.findViewById(R.id.userToDoDescription);
+        mToDoTextBodyDescription = (EditText) view.findViewById(R.id.userToDoDescription);
         mToDoDateSwitch = (SwitchCompat) view.findViewById(R.id.toDoHasDateSwitchCompat);
 //        mLastSeenTextView = (TextView)findViewById(R.id.toDoLastEditedTextView);
         mToDoSendFloatingActionButton = (FloatingActionButton) view.findViewById(R.id.makeToDoFloatingActionButton);
@@ -180,10 +178,6 @@ public class AddToDoFragment extends AppDefaultFragment implements DatePickerDia
                 Toast.makeText(getContext(), "Copied To Clipboard!", Toast.LENGTH_SHORT).show();
             }
         });
-
-
-
-
 
 
         mContainerLayout.setOnClickListener(new View.OnClickListener() {
@@ -241,12 +235,12 @@ public class AddToDoFragment extends AppDefaultFragment implements DatePickerDia
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 mUserEnteredDescription = s.toString();
-                    }
+            }
 
-                    @Override
-                    public void afterTextChanged(Editable s) {
-                    }
-                });
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
 
 
 //        String lastSeen = formatDate(DATE_FORMAT, mLastEdited);
